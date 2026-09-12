@@ -1,0 +1,14 @@
+{
+  "name": "predictfy-apresentacao-locaweb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Apresentação ao vivo Predictfy para a Locaweb; material separado da entrega acadêmica.",
+  "scripts": {
+    "build": "node fontes/gerar_html.cjs",
+    "test": "node fontes/validar_html.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "lucide-static": "0.577.0"
+  }
+}
