@@ -32,3 +32,29 @@ html[data-theme=light]{--hover-outline:#697585;--hover-tint:#697585}
 .card:focus-visible,.action-step:focus-visible,.measure>div:focus-visible{outline-color:var(--hover-outline)}
 @keyframes priority-outline{0%,100%{box-shadow:0 0 0 0 var(--priority-color,var(--red))}50%{box-shadow:0 0 0 2px color-mix(in srgb,var(--priority-color,var(--red)) 75%,transparent)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;translate:none!important;rotate:none!important;scale:none!important}.laser-layer{display:none}.active[data-scene="4"] .card::before{--ring-angle:45deg}}
+
+/* Ajustes de alinhamento e entrada. */
+[data-scene="7"] .intro{width:100%;text-align:center}
+[data-scene="7"] .intro h1,[data-scene="7"] .intro .sub{width:100%;max-width:none;margin-inline:auto;text-align:center}
+[data-scene="8"]{isolation:isolate}
+[data-scene="8"] .slide-inner{position:relative;z-index:1}
+[data-scene="8"]>.laser-layer{inset:0 0 64px;border-radius:0}
+.active[data-scene="8"] .grid::before{display:none}
+[data-scene="8"]>.laser-back i:nth-child(1){top:12%}
+[data-scene="8"]>.laser-back i:nth-child(2){top:34%}
+[data-scene="8"]>.laser-back i:nth-child(3){top:56%}
+[data-scene="8"]>.laser-back i:nth-child(4){top:74%;--laser-time:5.5s;--laser-delay:-4s}
+[data-scene="8"]>.laser-back i:nth-child(5){top:92%;--laser-time:4.8s;--laser-delay:-2.5s}
+[data-scene="8"]>.laser-front i:nth-child(1){top:22%;opacity:.2}
+[data-scene="8"]>.laser-front i:nth-child(2){top:65%;opacity:.25}
+[data-scene="8"]>.laser-front i:nth-child(3){top:84%;opacity:.3;--laser-time:5s;--laser-delay:-3s}
+.active[data-scene="6"] .body{animation:none}
+.active[data-scene="6"] .action-step{animation:steps-enter 1s cubic-bezier(.22,.68,.18,1) both;animation-delay:.1s}
+.active[data-scene="6"] .action-step:nth-child(2){animation-delay:.2s}
+.active[data-scene="6"] .action-step:nth-child(3){animation-delay:.3s}
+@keyframes steps-enter{from{opacity:0;transform:translateX(-85px)}to{opacity:1;transform:translateX(0)}}
+[data-scene="5"] .purpose>svg{width:64px;height:64px}
+[data-scene="10"] .demo-actions{text-align:center}
+[data-scene="10"] .primary{transform-origin:center}
+[data-scene="10"] .routes,[data-scene="10"] .brands{justify-content:center}
+@media(prefers-reduced-motion:reduce){.active[data-scene="6"] .action-step{animation:none!important;transform:none!important}}
